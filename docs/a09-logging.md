@@ -18,6 +18,8 @@ In vulnerable mode the code path that would record each failed login is skipped 
 
 ## The fix
 
+ABC 123
+
 In **secure mode** the same six failed logins are handled correctly:
 
 1. **Each security-relevant event is logged.** Every failed admin login is recorded with context — the event type, the targeted user, and the source IP — so an investigator can reconstruct what happened.
