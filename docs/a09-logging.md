@@ -17,7 +17,9 @@ In **vulnerable mode**, those six failures happen, but nothing is written to the
 In vulnerable mode the code path that would record each failed login is skipped entirely. The failed authentications occur inside the application, but the branch that calls the log-writing routine only runs in secure mode. Because nothing is recorded, the downstream alerting logic — which counts recent auth failures and raises an alert once they cross a threshold — never has any data to act on. The result is a security event that is real but leaves no trace and produces no warning.
 
 ## The fix
+
 ABC 123
+
 In **secure mode** the same six failed logins are handled correctly:
 
 1. **Each security-relevant event is logged.** Every failed admin login is recorded with context — the event type, the targeted user, and the source IP — so an investigator can reconstruct what happened.
